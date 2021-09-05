@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;600;700&display=swap');
+
+:root {
+    --blue: hsl(209,51,64);
+    --green: #09b39c;
+
+}
+
+
+body {
+    font-family: 'Source Sans Pro', 'Arial', sans-serif;
+}
+
 .gridcontainer {
     display: grid;
     width: 100vw;
@@ -29,7 +42,56 @@
 
 header {
     grid-area: header;
-    background: linear-gradient(to left top, red, pink);
+    display: flex;
+    height: 90px;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    border-bottom: 2px solid var(--green);
+}
+
+.header-container {
+    /* width: 1170px; */
+    display: flex;
+    flex: 0 1 1170px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+/* 
+.header-l {
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
+    display: inline-flex;
+}
+
+.header-r {
+    flex: 1;
+    display: flex;
+    align-items: center;
+} */
+
+nav {
+    display: inline-flex;
+}
+
+nav ul {
+    flex: 1;
+    font-weight: 400;
+    font-size: 1.3em;
+    /* margin: 1em 0 1em 0; */
+    margin-right: 2rem;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 2em;
+    border-bottom: 4px solid transparent;
+    transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+nav ul li:hover {
+    border-bottom: 4px solid var(--green);
 }
 
 footer {
@@ -40,7 +102,6 @@ footer {
 
 section.content {
     grid-area: main;
-    /* background-color: pink; */
     box-shadow: 10px 10px 10px rgba(90, 90, 90, 0.150);
     z-index: 5;
     padding: 1em 1em;
@@ -52,4 +113,27 @@ section.content {
 
 .aside-r {
     grid-area: aside-r;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 2rem;
+    /* height: 100%; */
+    /* width: 100%; */
+}
+
+header .logo {
+    flex: 1;
+    margin-right: 0;
+    height: 80%;
+}
+
+.logo-text {
+    flex: 1;
+    width: 100%;
+    margin-left: 1rem;
+    color: var(--green);
+    font-size: 1.2rem;
 }
