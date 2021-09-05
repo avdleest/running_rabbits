@@ -77,14 +77,15 @@ nav {
 
 nav ul {
     flex: 1;
+    list-style-type: none;
+    display: inline-flex;
+    align-items: center;
     font-weight: 400;
     font-size: 1.3em;
-    /* margin: 1em 0 1em 0; */
-    margin-right: 2rem;
+    margin-right: 3rem;
 }
 
 nav ul li {
-    display: inline-block;
     margin-left: 2em;
     border-bottom: 4px solid transparent;
     transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
@@ -116,10 +117,10 @@ section.content {
 }
 
 .logo-container {
-    display: flex;
+    display: inline-flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 2rem;
+    margin-left: 3rem;
     /* height: 100%; */
     /* width: 100%; */
 }
@@ -127,7 +128,7 @@ section.content {
 header .logo {
     flex: 1;
     margin-right: 0;
-    height: 80%;
+    height: 75px;
 }
 
 .logo-text {
@@ -135,5 +136,5 @@ header .logo {
     width: 100%;
     margin-left: 1rem;
     color: var(--green);
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
