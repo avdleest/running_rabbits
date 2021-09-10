@@ -3,8 +3,8 @@
 :root {
     --blue: hsl(209,51,64);
     --green: #09b39c;
-    --breakpoint-one: 768px;
-
+    --header-height: 90px;
+    --flex-item-size: 320px;
 }
 
 body {
@@ -38,6 +38,8 @@ h1 {
     font-weight: 600;
     border-bottom: 2px solid var(--green);
     padding-bottom: 0.1em;
+    scroll-margin-top: var(--header-height);
+    margin: 0.25em 0;
 }
 
 h2 {
@@ -58,8 +60,9 @@ a {
 
 header {
     grid-area: header;
+    background-color: white;
     display: flex;
-    height: 90px;
+    height: var(--header-height);
     width: 100%;
     position: fixed;
     z-index: 99;
@@ -126,7 +129,7 @@ article {
     margin: 0 auto;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 810px) {
     article {
         width: 100%;
         margin: 0;
@@ -134,7 +137,7 @@ article {
  }
 
  section.content {
-    padding: 1em 1em;
+    padding: 0 1em;
  }
 
  .list {
@@ -150,16 +153,23 @@ article {
      width: 100%;
  }
 
+
  .item {
     background-color: white;
     box-shadow: 5px 5px 5px rgba(90, 90, 90, 0.07);
     padding: 1em;
-    margin: 1em;
-    flex: 0 0 250px;
+    margin: 0.5em;
+    flex: 0 0 var(--flex-item-size);
     flex-flow: row wrap;
     line-height: 1;
     text-align: center;
 }
+
+@media screen and (max-width: 810px) {
+    .item {
+        flex: 1 0 100%;
+    }
+ }
 
 .image-container {
     width: 100%;
