@@ -4,12 +4,13 @@
     --blue: hsl(209,51,64);
     --green: #09b39c;
     --header-height: 90px;
-    --flex-item-size: 320px;
+    --flex-item-size: 250px;
 }
 
 body {
     font-family: 'Source Sans Pro', 'Arial', sans-serif;
     font-size: 18px;
+    overflow-x: hidden;
 }
 
 ul {
@@ -129,7 +130,7 @@ article {
     margin: 0 auto;
 }
 
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 850px) {
     article {
         width: 100%;
         margin: 0;
@@ -137,12 +138,12 @@ article {
  }
 
  section.content {
-    padding: 0 1em;
+    padding: 0 2em;
  }
 
  .list {
     background-color: #f7fafc;
-    margin: 0 -1em;
+    margin: 0 -2em;
     padding: 1em;
  }
 
@@ -165,7 +166,7 @@ article {
     text-align: center;
 }
 
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 850px) {
     .item {
         flex: 1 0 100%;
     }
